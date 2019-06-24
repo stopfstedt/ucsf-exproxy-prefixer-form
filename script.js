@@ -7,15 +7,6 @@ $(function() {
   var $copied = $(".copied");
   var clipboard;
 
-  if (ClipboardJS.isSupported()) {
-    $(".copy").show();
-    clipboard = new ClipboardJS(".copy");
-    clipboard.on('success', function(e) {
-      $copied.show();
-      e.clearSelection();
-    });
-  }
-
   var PREFIX = "https://ucsf.idm.oclc.org/login?url=";
 
   var DOI_DOT_ORG = "https://doi.org/";
@@ -50,6 +41,15 @@ $(function() {
       }
       return matches;
   };
+
+  if (ClipboardJS.isSupported()) {
+    $(".copy").show();
+    clipboard = new ClipboardJS(".copy");
+    clipboard.on('success', function(e) {
+      $copied.show();
+      e.clearSelection();
+    });
+  }
 
   $form.submit(function(event) {
     var generatedUrl;
