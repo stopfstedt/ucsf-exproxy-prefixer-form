@@ -10,8 +10,13 @@ $(function() {
 
   $form.submit(function(event) {
     var url = $input.val();
-    $originalUrl.html(url);
-    $generatedUrl.html(PREFIX + url);
+    var generatedUrl = PREFIX + url;
+
+    $originalUrl.text(url);
+    $originalUrl.attr('href', url);
+    $generatedUrl.text(generatedUrl);
+    $generatedUrl.attr('href', generatedUrl);
+
     $output.show();
     event.preventDefault();
   });
