@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>EZProxy Prefixer Tool</title>
   <link rel="stylesheet" type="text/css" href="styles.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
 <body>
-<form action="#" id="form">
+<form action="#" class="form">
   <label for="url">Enter a URL (must start with an https:// or http://)</label>
   <br>
   <input name="url"
@@ -20,15 +21,20 @@
   <button name="submit" type="submit" class="submit">Go!</button>
   <button name="reset" type="reset" class="reset">Clear</button>
 </form>
-<div id="output">
+<div class="output">
   The given URL is <a class="original"></a>.
   <br>
   The generated URL is <a class="generated"></a>.
+  <button type="button" class="copy" data-clipboard-target=".generated">
+    <i class="fas fa-clipboard"></i> Copy to clipboard
+  </button>
+  <span class="copied"><i class="fas fa-check"></i> Copied!</span>
 </div>
 </body>
 <script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 <script src="script.js"></script>
 </html>
