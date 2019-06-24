@@ -8,13 +8,15 @@
 </head>
 <body>
 <form action="#" class="form">
-  <label for="url">Enter a URL (must start with an https:// or http://)</label>
+  <label for="url">
+    Please enter a <abbr title="Uniform Resource Locator">URL</abbr>
+    or a <abbr title="Digital Object Identifier">DOI</abbr>.
+  </label>
   <br>
   <input name="url"
          id="url"
-         type="url"
-         placeholder="https://example.com"
-         pattern="http(s?)://.*"
+         type="text"
+         placeholder="https://example.com or 10.1000/xyz123"
          size="30"
          required>
   <br>
