@@ -3,7 +3,6 @@ $(function() {
   var $resetBtn  = $(".form button.reset");
   var $input = $(".form input");
   var $output = $(".output");
-  var $originalUrl = $(".original");
   var $generatedUrl = $(".generated");
   var $copied = $(".copied");
   var clipboard;
@@ -22,8 +21,6 @@ $(function() {
   var resetOutput = function() {
     $output.hide();
     $copied.hide();
-    $originalUrl.text("");
-    $originalUrl.attr('href', "");
     $generatedUrl.text("");
     $generatedUrl.attr('href', "");
   };
@@ -33,8 +30,6 @@ $(function() {
     var url = $input.val();
     var generatedUrl = PREFIX + url;
 
-    $originalUrl.text(url);
-    $originalUrl.attr('href', url);
     $generatedUrl.text(generatedUrl);
     $generatedUrl.attr('href', generatedUrl);
 
