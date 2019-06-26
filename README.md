@@ -1,6 +1,6 @@
 # UCSF EZProxy Prefixer Form
 
-Reference implementation of a EZproxy URL prefixer tool for UCSF.
+Reference implementation of an EZproxy URL prefixer tool for UCSF.
 
 ## Further reading
 
