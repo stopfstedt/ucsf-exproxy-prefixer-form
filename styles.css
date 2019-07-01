@@ -1,9 +1,9 @@
-.copied,
-.copy,
-.output {
+.ucsfezproxy-output,
+.ucsfezproxy-output .copied,
+.ucsfezproxy-output .copy {
     display: none;
 }
 
-.copied {
+.ucsfezproxy-output .copied {
     font-style: italic;
 }
