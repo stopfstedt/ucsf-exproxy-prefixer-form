@@ -1,10 +1,10 @@
 $(function() {
-  var $form = $(".form");
-  var $resetBtn  = $(".form button.reset");
-  var $input = $(".form input");
-  var $output = $(".output");
-  var $generatedUrl = $(".generated");
-  var $copied = $(".copied");
+  var $form = $(".ucsfezproxy-form");
+  var $resetBtn  = $(".ucsfezproxy-form button.reset");
+  var $input = $(".ucsfezproxy-form input");
+  var $output = $(".ucsfezproxy-output");
+  var $generatedUrl = $(".ucsfezproxy-output .generated");
+  var $copied = $(".ucsfezproxy-output .copied");
   var clipboard;
 
   var PREFIX = "https://ucsf.idm.oclc.org/login?url=";
@@ -44,7 +44,7 @@ $(function() {
 
   if (ClipboardJS.isSupported()) {
     $(".copy").show();
-    clipboard = new ClipboardJS(".copy");
+    clipboard = new ClipboardJS(".ucsfezproxy-output .copy");
     clipboard.on('success', function(e) {
       $copied.show();
       e.clearSelection();
