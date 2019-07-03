@@ -16,15 +16,14 @@
   <input name="url"
          id="ucsfezproxy-url"
          type="text"
-         placeholder="https://example.com or 10.1000/xyz123"
-         size="30"
+         placeholder="https://doi.org/10.1000/xyz123 or 10.1000/xyz123"
+         size="50"
          required>
   <br>
-  <button name="submit" type="submit" class="submit">Go!</button>
-  <button name="reset" type="reset" class="reset">Clear</button>
+  <button name="submit" type="submit" class="submit">Make EZProxy URL</button>
 </form>
 <div class="ucsfezproxy-output">
-  The generated URL is <a class="generated"></a>.
+  The generated URL is <a class="generated" target="_blank"></a> <em>(test it out).</em>
   <button type="button" class="copy" data-clipboard-target=".generated">
     <i class="fas fa-clipboard"></i> Copy to clipboard
   </button>
