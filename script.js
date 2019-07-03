@@ -1,6 +1,5 @@
 $(function() {
   var $form = $(".ucsfezproxy-form");
-  var $resetBtn  = $(".ucsfezproxy-form button.reset");
   var $input = $(".ucsfezproxy-form input");
   var $output = $(".ucsfezproxy-output");
   var $generatedUrl = $(".ucsfezproxy-output .generated");
@@ -68,9 +67,5 @@ $(function() {
 
     $output.show();
     event.preventDefault();
-  });
-
-  $resetBtn.click(function() {
-    resetOutput();
   });
 });
